@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <title>JPA 회원상세보기</title>
+</head>
+
+<body>
+<table>
+    <caption>JPA 회원상세보기</caption>
+    <tr>
+        <th>아이디</th>
+        <td th:text="${view.MId}"></td>
+    </tr>
+    <tr>
+        <th>비밀번호</th>
+        <td>[[${view.MPw}]]</td>
+    </tr>
+    <tr>
+        <th>이름</th>
+        <td>[[${view.MName}]]</td>
+    </tr>
+    <tr>
+        <th>성별</th>
+        <td>[[${view.MGender}]]</td>
+    </tr>
+    <tr>
+        <th>이메일</th>
+        <td>[[${view.MEmail}]]</td>
+    </tr>
+    <tr>
+        <th>연락처</th>
+        <td>[[${view.MPhone}]]</td>
+    </tr>
+
+    <tr>
+        <th colspan="2">
+            <button id="modify">수정</button>
+            <button id="delete">삭제</button>
+        </th>
+    </tr>
+
+</table>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    $('#modify').click(()=>{
+        location.href=`/modiForm/[[${view.MId}]]`
+    })
+
+    $('#delete').click(()=>{
+        location.href=`/mDelete/[[${view.MId}]]`
+    })
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <title>JPA 회원가입</title>
+</head>
+
+<body>
+<form action="/mJoin" method="post">
+    <table>
+        <caption>회원가입</caption>
+
+        <tr>
+            <th>아이디</th>
+            <td><input type="text" name="mId"></td>
+        </tr>
+
+        <tr>
+            <th>비밀번호</th>
+            <td><input type="password" name="mPw"></td>
+        </tr>
+
+        <tr>
+            <th>이름</th>
+            <td><input type="text" name="mName"></td>
+        </tr>
+
+        <tr>
+            <th>생년월일</th>
+            <td><input type="date" name="mBirth"></td>
+        </tr>
+
+        <tr>
+            <th>성별</th>
+            <td>
+                남성 <input type="radio" name="mGender" value="남성">
+                여성 <input type="radio" name="mGender" value="여성">
+            </td>
+        </tr>
+
+        <tr>
+            <th>이메일</th>
+            <td><input type="email" name="mEmail"></td>
+        </tr>
+
+        <tr>
+            <th>연락처</th>
+            <td><input type="text" name="mPhone"></td>
+        </tr>
+
+        <tr>
+            <th colspan="2">
+                <input type="submit" value="가입" />
+            </th>
+        </tr>
+
+    </table>
+
+</form>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</html>
